@@ -1,0 +1,19 @@
+.selectionview-container {
+    display: grid;
+    grid-template-rows: $title-height 0.5fr 1fr;
+    grid-template-areas: "title" "attribute-view" "seed-view";
+
+    font-size: $normal-fontsize;
+
+    & .title {
+        grid-area: title;
+    }
+
+    & .seed-view {
+        grid-area: seed-view;
+    }
+
+    & .attribute-view {
+        grid-area: attribute-view;
+    }
+}

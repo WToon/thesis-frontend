@@ -1,0 +1,31 @@
+.track-wrapper {
+    display: grid;
+    grid-template-columns: $item-width auto;
+    grid-template-areas: "picture info";
+    height: $item-height;
+
+    & .picture {
+        grid-area: picture;
+        height: 100%;
+    }
+
+    & .trackinfo {
+        grid-area: info;
+        font-size: 1.2vw;
+        margin: auto auto auto 10px;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "title" "artists";
+
+        & .tracktitle {
+            grid-area: title;
+            font-weight: bolder;
+        }
+
+        & .artists {
+            grid-area: artists;
+            font-size: smaller;
+        }
+    }
+}

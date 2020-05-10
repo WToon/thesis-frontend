@@ -1,0 +1,18 @@
+.recommendations-wrapper {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+
+    height: 100%;
+
+    margin-bottom: 10px;
+
+    animation: fade-in 1.2s;
+    animation-timing-function: ease-in;
+
+    & .get-started {
+        text-align: center;
+        font-size: xx-large;
+    }
+
+}

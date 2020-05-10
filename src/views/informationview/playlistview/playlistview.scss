@@ -1,0 +1,31 @@
+.playlistview {
+    display: grid;
+    grid-template-rows: 90% 8%;
+    grid-template-areas: "playlist" "buttons";
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & .playlist-wrapper {
+        grid-area: playlist;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
+        grid-template-columns: "track" "button";
+
+        & .playlist-item {
+            scroll-snap-align: start;
+            display: grid;
+            grid-template-columns: auto 21%;
+            border-radius: 25px;
+        }
+    }
+    & .buttons {
+        grid-area: buttons;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        padding: 8px 0px;
+        margin: 5px;
+    }
+}

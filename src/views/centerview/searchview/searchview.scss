@@ -1,0 +1,21 @@
+.search-view {
+    display: grid;
+    grid-template-rows: $searchbar-height auto;
+    grid-template-areas: "search-bar" "search-results";
+    height: 100%;
+
+    & .search-bar {
+        grid-area: search-bar;
+    }
+
+    & .search-results {
+        grid-area: search-results;
+    }
+
+    .get-started {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: xx-large;
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "short_name": "Thesis App",
+  "name": "Thesis App",
+  "start_url": ".",
+  "display": "standalone"
+}

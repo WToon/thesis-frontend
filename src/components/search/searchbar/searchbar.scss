@@ -1,0 +1,13 @@
+.searchbar-wrapper {
+
+    & .searchbar {
+        font-size: large;
+        position: relative;
+        border-radius: $button-border-radius;
+        border: none;
+        width: $searchbar-width;
+        height: $searchbar-height;
+        box-sizing: border-box;
+        padding-left: 40px;
+    }
+}

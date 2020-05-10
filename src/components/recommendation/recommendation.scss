@@ -1,0 +1,56 @@
+.recommendation-wrapper {
+    display: grid;
+    grid-template-columns: 10% 1fr 10% ;
+    grid-template-areas: "play" "track" "like";
+    margin-bottom: 10px;
+
+    scroll-snap-align: start;
+
+    border-radius: $button-border-radius;
+    background-color: #6e995d;
+
+    & .recommmended-track {
+        grid-area: track;
+    }
+
+    & .like-button {
+        grid-area: like;
+    }
+
+    & .preview-button {
+        grid-area: play;
+    }
+
+
+}
+
+.recommendation-wrapper2 {
+    display: grid;
+    grid-template-columns: 10% 1fr 10% 10% ;
+    grid-template-areas: "play" "track" "details" "like";
+    margin-bottom: 10px;
+
+    scroll-snap-align: start;
+
+    border-radius: $button-border-radius;
+    background-color: #6e995d;
+
+    & .recommmended-track {
+        grid-area: track;
+    }
+
+    & .like-button {
+        grid-area: like;
+    }
+    & .detail-button {
+        grid-area: details;
+    }
+
+    & .preview-button {
+        grid-area: play;
+    }
+}
+
+.detailed {
+    background-color: #60a647;
+}

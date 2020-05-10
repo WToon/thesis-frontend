@@ -1,0 +1,42 @@
+.details-wrapper {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+
+    & .trackdetails {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+
+        animation: fade-in 1.2s;
+        animation-timing-function: ease-in;
+
+        & .temp-titlespan {
+            color: $spotify-green;
+        }
+    }
+
+    & .artistdetails {
+        padding-left: 20px;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+
+
+        & .temp-titlespan {
+            font-size: 24px;
+            color: $spotify-green;
+        }
+
+        &.toptracks {
+            font-size: smaller;
+        }
+
+        &.related-artists {
+            font-size: smaller;
+        }
+    }
+}

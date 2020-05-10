@@ -1,0 +1,21 @@
+.seedview {
+    display: grid;
+    grid-template-rows: $title-height/2 auto;
+    grid-template-areas: "title" "seeds";
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & .seedview-title {
+        grid-area: title;
+        text-align: center;
+        font-size: 30px;
+        color: $spotify-green;
+    }
+
+    & .seed-container {
+        grid-area: seeds;
+        margin-bottom: 5px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+}

@@ -1,0 +1,38 @@
+.seed-wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 18%;
+    grid-template-areas: "seed" "remove";
+    background-color: $spotify-gray;
+    border-radius: 35px;
+    margin-top: 5px;
+
+    & .seed {
+        grid-area: seed;
+    }
+
+    & .remove {
+        grid-area: remove;
+    }
+}
+
+.seed-wrapper2 {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-areas: "seed" "details" "remove";
+    background-color: $spotify-gray;
+    border-radius: 50px;
+    margin: 5px;
+
+    & .seed {
+        grid-area: seed;
+    }
+
+    & .details {
+        grid-area: details;
+    }
+
+    & .remove {
+        grid-area: remove;
+    }
+}

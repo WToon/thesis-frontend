@@ -1,0 +1,61 @@
+@import "./styles/";
+@import "./views/";
+@import "./components/";
+
+#root,
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: $font;
+    font-size: $normal-fontsize;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.title {
+    font-size: $title-fontsize;
+    text-align: center;
+    margin: auto;
+    color: $spotify-green;
+    width: 100%;
+    height: 100%;
+    line-height: $title-height;
+}
+
+div {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    outline: none;
+}
+
+.app-container {
+    background-color: #363634;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    grid-template-areas: "selection-view center-view information-view";
+
+    & .selection-view {
+        grid-area: selection-view;
+    }
+
+    & .center-view {
+        grid-area: center-view;
+        background-color: $spotify-darkgray;
+    }
+
+    & .information-view {
+        grid-area: information-view;
+    }
+}

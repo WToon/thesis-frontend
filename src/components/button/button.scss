@@ -1,0 +1,83 @@
+.button-wrapper {
+    display: flex;
+    height: 100%;
+    outline: none;
+
+    & .custom-button {
+        border-width: 0px;
+        border-radius: $button-border-radius;
+        width: 100%;
+        font-size: large;
+        color: black;
+    }
+
+    & .switchSearching {
+        background-color: $spotify-green;
+        color: $spotify-black;
+        width: calc(100% - 1em);
+        align-content: space-between;
+        margin: 10px 0px;
+        & .svg-inline--fa.fa-w-16 {
+            margin-right: 15px;
+        }
+    }
+
+    & .switchRecommending {
+        background-color: $spotify-green;
+
+        width: calc(100% - 1em);
+        color: $spotify-black;
+        margin: 10px 0px;
+        & .svg-inline--fa.fa-w-16 {
+            margin-right: 15px;
+        }
+    }
+
+    & .addButton {
+        background-color: $spotify-green;
+        margin: 7px;
+    }
+
+    & .removeButton {
+        background-color: $spotify-red;
+        margin: 7px;
+    }
+
+    & .likeButton {
+        background-color: #327817;
+        margin: 7px;
+    }
+
+    & .dislikeButton {
+        background-color: $spotify-red;
+        margin: 7px;
+    }
+
+    & .playButton {
+        background-color: #327817;
+        padding-left: 12px;
+        margin: 7px;
+    }
+
+    & .pauseButton {
+        background-color: $spotify-lightgray;
+        margin: 7px;
+    }
+
+    & .emptyButton {
+        background-color: $spotify-lightgray;
+    }
+
+    & .saveButton {
+        background-color: $spotify-green;
+    }
+
+    & .deleteButton {
+        background-color: $spotify-red;
+    }
+
+    & .detailButton {
+        background-color: $spotify-lightgray;
+        margin: 7px;
+    }
+}

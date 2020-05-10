@@ -1,0 +1,26 @@
+.attributeview {
+    display: grid;
+    grid-template-rows: $title-height/2 auto;
+    grid-template-areas: "title" "seeds";
+    margin-left: 20px;
+    margin-right: 20px;
+
+    & .attributeview-title {
+        grid-area: title;
+        text-align: center;
+        font-size: 30px;
+        color: $spotify-green;
+        margin: auto;
+    }
+
+    & .seed-container {
+        grid-area: seeds;
+        margin: 10px 0;
+
+        & .empty-text {
+            margin: auto;
+            font-size: normal;
+            text-align: center;
+        }
+    }
+}

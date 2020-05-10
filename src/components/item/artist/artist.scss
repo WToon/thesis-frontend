@@ -1,0 +1,20 @@
+.artist-wrapper {
+    display: grid;
+    grid-template-columns: $item-width auto;
+    grid-template-areas: "picture info";
+    height: $item-height;
+    background-color: $spotify-darkgray;
+
+    & .picture {
+        grid-area: picture;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .artist-name {
+        grid-area: info;
+        font-size: normal;
+        font-weight: bolder;
+        margin: auto auto auto 10px;
+    }
+}

@@ -1,0 +1,27 @@
+.informationview-container {
+    display: grid;
+    grid-template-rows: $title-height auto $title-height;
+    grid-template-areas: "title" "information-view" "playlist-toggle";
+
+    & .title {
+        grid-area: title;
+    }
+
+    & .information-view {
+        grid-area: information-view;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+
+    & .playlist-toggle {
+        grid-area: playlist-toggle;
+        padding:10px 20px;
+    }
+
+    & .playlist-save-delete {
+        grid-area: playlist-toggle;
+        padding:10px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

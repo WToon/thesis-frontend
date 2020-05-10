@@ -1,0 +1,25 @@
+.centerview-container {
+    display: grid;
+    grid-template-rows: $title-height auto $item-height;
+    grid-template-areas: "title" "center-view" "toggle";
+    border-left: 2px;
+    border-right: 2px;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid;
+    border-color: $spotify-darkgray;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    & .title {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        padding-left: 0.4em;
+        text-align: left;
+
+        & .svg-inline--fa.fa-w-16 {
+            padding-right: .3em;
+        }
+    }
+}
