@@ -7,7 +7,7 @@
     scroll-snap-align: start;
 
     border-radius: $button-border-radius;
-    background-color: #6e995d;
+    background-color: $spotify-gray;
 
     & .recommmended-track {
         grid-area: track;
@@ -33,7 +33,7 @@
     scroll-snap-align: start;
 
     border-radius: $button-border-radius;
-    background-color: #6e995d;
+    background-color: $spotify-gray;
 
     & .recommmended-track {
         grid-area: track;
@@ -52,5 +52,5 @@
 }
 
 .detailed {
-    background-color: #60a647;
+    background-color: #7a7ecc;
 }
