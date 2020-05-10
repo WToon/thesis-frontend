@@ -11,6 +11,10 @@
         color: black;
     }
 
+    & .playlistSwitch {
+        background-color: #42aaf5;
+    }
+
     & .switchSearching {
         background-color: $spotify-green;
         color: $spotify-black;

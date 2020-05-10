@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus, faHeart, faThumbsDown, faPlay, faPause, faMusic, faSearch, faSave, faTrash, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import {
+    faPlus, faMinus, faHeart, faThumbsDown, faPlay, faUndo,
+    faPause, faMusic, faSearch, faSave, faTrash, faQuestion,
+} from '@fortawesome/free-solid-svg-icons'
 
 class Button extends Component {
 
     titles = {
-        addButton : "Add to seeds",
+        addButton: "Add to seeds",
         likeButton: "Add to playlist",
         dislikeButton: "Remove from playlist",
         playButton: "Play preview",
@@ -30,6 +33,7 @@ class Button extends Component {
                     {buttonType === "saveButton" && <FontAwesomeIcon icon={faSave} />}
                     {buttonType === "deleteButton" && <FontAwesomeIcon icon={faTrash} />}
                     {buttonType === "detailButton" && <FontAwesomeIcon icon={faQuestion} />}
+                    {buttonType.includes("returnButton") && <FontAwesomeIcon icon={faUndo} />}
                     {this.props.children}
                 </button>
             </div>

@@ -25,7 +25,6 @@ class PlaylistView extends Component {
                 <div className="playlist-wrapper">
                     {tracks.length > 0 ? tracks : <span>{EMPTY_PLAYLIST_TEXT}</span>}
                 </div>
-
             </div>
         );
     }

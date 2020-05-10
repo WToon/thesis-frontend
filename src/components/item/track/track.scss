@@ -21,11 +21,13 @@
         & .tracktitle {
             grid-area: title;
             font-weight: bolder;
+            vertical-align: bottom;
         }
 
         & .artists {
             grid-area: artists;
             font-size: smaller;
+            vertical-align: top;
         }
     }
 }

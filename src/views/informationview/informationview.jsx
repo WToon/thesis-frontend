@@ -26,11 +26,13 @@ class InformationView extends Component {
                 {
                     (!playlistIsOpen) ?
                         <div className="playlist-toggle">
-                            <Button buttonType="" onClick={playlistViewHandler}>{playlistIsOpen ? "View details" : `View playlist: ${playlist.length} tracks`}</Button>
+                            <Button buttonType="playlistSwitch" onClick={playlistViewHandler}>{playlistIsOpen ? "View details" : `View playlist: ${playlist.length} tracks`}</Button>
                         </div> :
                         <div className="playlist-save-delete">
                             <Button buttonType="saveButton" onClick={() => this.handleSave(playlist)} />
                             <Button buttonType="deleteButton" onClick={() => playlistDeleteHandler()} />
+                            <Button buttonType={`playlistSwitch ${playlistIsOpen && "returnButton"}`}
+                                onClick={playlistViewHandler}>{!playlistIsOpen && `View playlist: ${playlist.length} tracks`}</Button>
                         </div>
                 }
             </div >
