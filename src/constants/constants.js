@@ -15,5 +15,5 @@ export const SEARCH_DELAY = 400;
 
 export const INITIAL_SLIDER_VALUE = 0.5;
 // interface type can be "hover" or ""
-export const INTERFACE_TYPE = "";
+export const INTERFACE_TYPE = "hover";
 export const CONTING_DELAY = 160; //ms
