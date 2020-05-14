@@ -8,10 +8,13 @@ class InformationView extends Component {
     static contextType = ServiceProviderContext;
 
     handleSave = (playlist) => {
-        const name = prompt("Pick a name for your playlist");
-        this.context.get(SpotifyService).createPlaylist(name).then(
-            emptyPlaylist => this.context.get(SpotifyService).populatePlaylist(emptyPlaylist.id, playlist)
-        );
+        if (playlist.length > 4) {
+            const name = prompt("Pick a name for your playlist");
+            this.context.get(SpotifyService).createPlaylist(name).then(
+                emptyPlaylist => this.context.get(SpotifyService).populatePlaylist(emptyPlaylist.id, playlist)
+            );
+            this.props.completedHandler();
+        } else { alert("A playlist must contain at least 5 songs to be saved.") }
     }
 
     render() {

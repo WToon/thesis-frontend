@@ -4,6 +4,7 @@ import { ServiceProviderContext } from './lib/service-provider-context';
 import { SpotifyService } from './services/spotify-service';
 
 import { INITIAL_SLIDER_VALUE } from './constants'
+import Completed from './views/completedview/completed';
 
 class App extends Component {
     static contextType = ServiceProviderContext;
@@ -20,8 +21,13 @@ class App extends Component {
         recommendations: {},
         playlist: [],
         playlistIsOpen: true,
-        selecting: true
+        selecting: true,
+        completed: false,
     };
+
+    completedHandler = () => {
+        this.setState({ completed: true })
+    }
 
     // Handlers for selections made in searchView
     selectionAddHandler = (seed) => {
@@ -102,22 +108,28 @@ class App extends Component {
 
     render() {
         return (
-            <div className="app-container">
-                <SelectionView className="selection-view"
-                    seeds={this.state.seeds} attributes={this.state.attributes} selecting={this.state.selecting}
-                    onSelectionRemoveCallback={this.selectionRemoveHandler} onAttributeChangeCallback={this.attributeChangeHandler}
-                    informationRequestCallback={this.informationRequestHandler} />
+            <>
+                {
+                    this.state.completed ? <Completed></Completed> :
 
-                <CenterView className="center-view"
-                    recommendations={this.state.recommendations} selecting={this.state.selecting} seeds={this.state.seeds} details={this.state.details}
-                    onSelectionAddCallback={this.selectionAddHandler} informationRequestCallback={this.informationRequestHandler}
-                    playlistAddHandler={this.playlistAddHandler} handleViewToggle={this.handleViewToggle} />
+                        <div className="app-container">
+                            <SelectionView className="selection-view"
+                                seeds={this.state.seeds} attributes={this.state.attributes} selecting={this.state.selecting}
+                                onSelectionRemoveCallback={this.selectionRemoveHandler} onAttributeChangeCallback={this.attributeChangeHandler}
+                                informationRequestCallback={this.informationRequestHandler} />
 
-                <InformationView className="information-view"
-                    details={this.state.details} playlist={this.state.playlist} attributes={this.state.attributes}
-                    playlistIsOpen={this.state.playlistIsOpen} playlistViewHandler={this.playlistViewHandler}
-                    playlistDeleteHandler={this.playlistDeleteHandler} playlistRemoveTrackHandler={this.playlistRemoveTrackHandler} />
-            </div>
+                            <CenterView className="center-view"
+                                recommendations={this.state.recommendations} selecting={this.state.selecting} seeds={this.state.seeds} details={this.state.details}
+                                onSelectionAddCallback={this.selectionAddHandler} informationRequestCallback={this.informationRequestHandler}
+                                playlistAddHandler={this.playlistAddHandler} handleViewToggle={this.handleViewToggle} />
+
+                            <InformationView className="information-view"
+                                details={this.state.details} playlist={this.state.playlist} attributes={this.state.attributes}
+                                playlistIsOpen={this.state.playlistIsOpen} playlistViewHandler={this.playlistViewHandler} completedHandler={this.completedHandler}
+                                playlistDeleteHandler={this.playlistDeleteHandler} playlistRemoveTrackHandler={this.playlistRemoveTrackHandler} />
+                        </div>
+                }
+            </>
         );
     }
 }

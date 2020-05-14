@@ -1,0 +1,14 @@
+.completed {
+    height: 100%;
+    width: 100%;
+    align-content: center;
+
+    background-color: #363634;
+    & span {
+        display: table;
+        margin: auto auto;
+        padding-top: 10%;
+        font-size: 24px;
+        color: whitesmoke;
+    }
+}
