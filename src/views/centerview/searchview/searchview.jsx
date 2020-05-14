@@ -47,7 +47,6 @@ class Search extends Component {
                     : <div className="get-started">
                         <span style={{ height: "150px" }}></span>
                         <span>Get started by picking 5 of your favourite songs and artists.</span>
-                        <span>Adjust the track attributes to your liking.</span>
                     </div>}
             </div >
         );

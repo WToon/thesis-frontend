@@ -5,8 +5,8 @@ export const IMGALT = "Img faulty";
 export const GENRETYPE = "genre";
 
 export const SEARCH_TEXT = "Get started by picking songs you want your recommendations to be based on.";
-export const EMPTY_SEEDVIEW_TEXT = "'Seeds' let us know what kind of songs u are looking for";
-export const EMPTY_PLAYLIST_TEXT = "Your playlist is still empty. Pick some of our recommendations!";
+export const EMPTY_SEEDVIEW_TEXT = "These songs let us know what kind of music u'd like in your playlist";
+export const EMPTY_PLAYLIST_TEXT = "Your playlist is still empty. Explore some of our recommendations!";
 export const EMPTY_ATTRIBUTE_TEXT = "Select some of your favourite songs and start exploring your recommendations!";
 export const ATTRIBUTES = ["danceability", "energy", "tempo"];
 

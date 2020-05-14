@@ -51,17 +51,17 @@ class TrackDetails extends Component {
                 <div className="attributes">
                     <div className="attribute">
                         <span>Danceability: </span>
-                        <Line percent={audioFeatures.danceability * 100} strokeWidth="4" strokeColor="#1db954" trailWidth="0" trailColor="grey" />
+                        <Line percent={audioFeatures.danceability * 100} strokeWidth="4" strokeColor="#7a7ecc" trailWidth="0" trailColor="grey" />
                         <Line percent={danceability * 100} strokeWidth="4" strokeColor="#f59542" trailWidth="0" trailColor="grey" />
                     </div>
                     <div className="attribute">
                         <span>Energy:</span>
-                        <Line percent={audioFeatures.energy * 100} strokeWidth="4" strokeColor="#1db954" trailWidth="0" trailColor="grey" />
+                        <Line percent={audioFeatures.energy * 100} strokeWidth="4" strokeColor="#7a7ecc" trailWidth="0" trailColor="grey" />
                         <Line percent={energy * 100} strokeWidth="4" strokeColor="#f59542" trailWidth="0" trailColor="grey" />
                     </div>
                     <div className="attribute">
                         <span>Tempo: {Math.round(audioFeatures.tempo)} bpm</span>
-                        <Line percent={(audioFeatures.tempo - 80) / .80} strokeWidth="4" strokeColor="#1db954" trailWidth="0" trailColor="grey" />
+                        <Line percent={(audioFeatures.tempo - 80) / .80} strokeWidth="4" strokeColor="#7a7ecc" trailWidth="0" trailColor="grey" />
                         <Line percent={(tempo - 80) / .80} strokeWidth="4" strokeColor="#f59542" trailWidth="0" trailColor="grey" />
                     </div>
                 </div>
