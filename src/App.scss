@@ -35,11 +35,13 @@ button {
     outline: none;
 }
 
+
 .app-container {
     background-color: #363634;
     color: whitesmoke;
     width: 100%;
     height: 100%;
+    cursor: default;
 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

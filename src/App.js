@@ -71,6 +71,7 @@ class App extends Component {
 
     // Handler for any requests for information (searchView and selectionView)
     informationRequestHandler = (id, type, e) => {
+        e.preventDefault()
         // Instead update the details
         this.context.get(SpotifyService).getDetails(id, type).then(details => { this.setState({ details }) });
         // Close the open playlist display so the details become visible
@@ -112,9 +113,9 @@ class App extends Component {
                 {
                     this.state.completed ? <Completed></Completed> :
 
-                        <div className="app-container">
+                        <div className="app-container" onContextMenu={e => e.preventDefault()}>
                             <SelectionView className="selection-view"
-                                seeds={this.state.seeds} attributes={this.state.attributes} selecting={this.state.selecting}
+                                seeds={this.state.seeds} attributes={this.state.attributes} selecting={this.state.selecting} details={this.state.details}
                                 onSelectionRemoveCallback={this.selectionRemoveHandler} onAttributeChangeCallback={this.attributeChangeHandler}
                                 informationRequestCallback={this.informationRequestHandler} />
 

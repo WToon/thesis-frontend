@@ -40,10 +40,9 @@ class searchResults extends Component {
                         {searchResults.map(item => {
                             let className = "";
                             if (details.track && details.track.id === item.id) { className = "detailed" }
-                            return <div key={item.id} className={`searchresult ${className}`}>
+                            return <div key={item.id} className={`searchresult ${className}`} onContextMenu={(e) => informationRequestCallback(item.id, item.type, e)}>
                                 {item.type === ARTISTTYPE && <Artist artist={item} />}
                                 {item.type === TRACKTYPE && <Track track={item} />}
-                                <Button buttonType="detailButton" onClick={(e) => informationRequestCallback(item.id, item.type, e)} />
                                 <Button buttonType="addButton" onClick={() => onSelectionAddCallback(item)} />
                             </div>
                         }

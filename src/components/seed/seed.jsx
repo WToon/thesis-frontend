@@ -15,6 +15,8 @@ class Selection extends Component {
 
     render() {
         const { type, id } = this.props.seed
+        let className = "";
+        if (this.props.details.track && this.props.details.track.id === id) { className = "detailed" }
         return (
             <div>
                 {(INTERFACE_TYPE === "hover") ?
@@ -25,13 +27,11 @@ class Selection extends Component {
                         <Button className="remove" buttonType="removeButton" onClick={() => this.props.onSelectionRemoveCallback(this.props.seed)} />
                     </div> :
                     // interface type = "mouse"
-                    <div className="seed-wrapper" onContextMenu={(e) => this.props.informationRequestCallback(id, type, e)} >
+                    <div className={ `seed-wrapper ${className}`} onContextMenu={(e) => this.props.informationRequestCallback(id, type, e)} >
                         {type === TRACKTYPE && <Track type="seed" track={this.props.seed} />}
                         {type === ARTISTTYPE && <Artist type="seed" artist={this.props.seed} />}
                         <Button className="remove" buttonType="removeButton" onClick={() => this.props.onSelectionRemoveCallback(this.props.seed)} />
                     </div>
-
-
                 }
             </div>
         );

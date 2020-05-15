@@ -17,9 +17,9 @@ function loadAccessToken(serviceProvider) {
     if (!accessToken) {
         // Redirect to our authentication backend.
         // This backend will redirect back to the application with an access token in the URL after a successful spotify login.
-        // window.location = "http://localhost:8888/login";
+        window.location = "http://localhost:8888/login";
         // mc
-        window.location = "https://thesis-login-backend.herokuapp.com/login";
+        //window.location = "https://thesis-login-backend.herokuapp.com/login";
         // dd
         //window.location = "https://thesis-login-backend2.herokuapp.com/login";
     }

@@ -28,11 +28,10 @@ class Recommendation extends Component {
                         <Track className="recommended-track" track={track} />
                         <Button buttonType="likeButton" onClick={() => playlistAddHandler(track)} />
                     </div> :
-                    <div className={ `recommendation-wrapper2 ${className}`}>
+                    <div className={ `recommendation-wrapper2 ${className}`} onContextMenu={(e) => informationRequestCallback(track.id, "track", e)}>
                         <Button onClick={() => handlePreviewRequest(track.preview_url)}
                             buttonType={playing ? "pauseButton" : "playButton"} />
                         <Track className="recommended-track" track={track} />
-                        <Button buttonType="detailButton" onClick={(e) => informationRequestCallback(track.id, "track", e)} />
                         <Button buttonType="likeButton" onClick={() => playlistAddHandler(track)} />
                     </div>
                 }
