@@ -111,7 +111,7 @@ class App extends Component {
         return (
             <>
                 {
-                    this.state.completed ? <Completed></Completed> :
+                    this.state.completed ? <Completed onContextMenu={e => e.preventDefault()}></Completed> :
 
                         <div className="app-container" onContextMenu={e => e.preventDefault()}>
                             <SelectionView className="selection-view"

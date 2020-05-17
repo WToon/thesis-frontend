@@ -16,23 +16,3 @@
     }
 }
 
-.seed-wrapper2 {
-    display: grid;
-    grid-template-columns: auto 25% ;
-    grid-template-areas: "seed" "details" "remove";
-    background-color: $spotify-gray;
-    border-radius: 50px;
-    margin: 5px;
-
-    & .seed {
-        grid-area: seed;
-    }
-
-    & .details {
-        grid-area: details;
-    }
-
-    & .remove {
-        grid-area: remove;
-    }
-}

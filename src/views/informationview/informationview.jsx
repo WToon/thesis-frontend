@@ -10,6 +10,7 @@ class InformationView extends Component {
     handleSave = (playlist) => {
         if (playlist.length > 4) {
             const name = prompt("Pick a name for your playlist");
+            if (!name) {return}
             this.context.get(SpotifyService).createPlaylist(name).then(
                 emptyPlaylist => this.context.get(SpotifyService).populatePlaylist(emptyPlaylist.id, playlist)
             );
